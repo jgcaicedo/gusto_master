@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gusto_master/app.dart';
-import 'package:gusto_master/data/repositories/gusto_repository.dart' as repo;
 import 'package:gusto_master/data/sources/pokemon_api.dart';
 import 'package:gusto_master/logic/api_cubit/api_cubit.dart';
 import 'package:hive_flutter/hive_flutter.dart';

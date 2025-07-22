@@ -18,7 +18,7 @@ void main() {
       MaterialApp(
         home: BlocProvider<PreferenceCubit>.value(
           value: mockCubit,
-          child: GustoFormPage(),
+          child: const GustoFormPage(),
         ),
       ),
     );

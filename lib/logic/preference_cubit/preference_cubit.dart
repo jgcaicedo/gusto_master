@@ -16,7 +16,7 @@ class PreferenceCubit extends Cubit<PreferenceState> {
       final gustos = repository.getAll();
       emit(PreferenceLoaded(gustos));
     } catch (e) {
-      emit(PreferenceError('Error al cargar gustos'));
+      emit(const PreferenceError('Error al cargar gustos'));
     }
   }
 

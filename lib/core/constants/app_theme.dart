@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 /// Clase que define los temas visuales de la aplicación (colores, estilos, etc).
 class AppTheme {

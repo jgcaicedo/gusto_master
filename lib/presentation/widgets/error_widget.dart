@@ -5,7 +5,7 @@ import 'package:gusto_master/core/utils/responsive.dart';
 class CustomErrorWidget extends StatelessWidget {
   final String message;
   final VoidCallback? onRetry;
-  const CustomErrorWidget({Key? key, required this.message, this.onRetry}) : super(key: key);
+  const CustomErrorWidget({super.key, required this.message, this.onRetry});
 
   @override
   Widget build(BuildContext context) {

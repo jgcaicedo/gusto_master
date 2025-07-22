@@ -29,7 +29,7 @@ void main() {
       MaterialApp(
         home: BlocProvider<PreferenceCubit>.value(
           value: mockCubit,
-          child: GustoListPage(),
+          child: const GustoListPage(),
         ),
       ),
     );

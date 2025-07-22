@@ -3,7 +3,7 @@ import 'package:gusto_master/core/utils/responsive.dart';
 
 /// Widget que muestra un indicador de carga circular.
 class LoadingWidget extends StatelessWidget {
-  const LoadingWidget({Key? key}) : super(key: key);
+  const LoadingWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

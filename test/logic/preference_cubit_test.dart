@@ -67,7 +67,7 @@ void main() {
       act: (cubit) => cubit.deleteGusto('test-id'),
       expect: () => [
         PreferenceLoading(),
-        PreferenceLoaded([]),
+        const PreferenceLoaded([]),
       ],
     );
 

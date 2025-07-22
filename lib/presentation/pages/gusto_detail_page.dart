@@ -2,10 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gusto_master/core/utils/responsive.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-
 import '../../logic/preference_cubit/preference_cubit.dart';
-import '../../data/models/gusto.dart';
-import '../widgets/loadling_widget.dart';
 import '../widgets/error_widget.dart';
 
 /// Página de detalle que muestra la información completa de un gusto seleccionado.
@@ -61,7 +58,7 @@ class GustoDetailPage extends StatelessWidget {
                             BoxShadow(
                               color: colorScheme.shadow.withOpacity(0.12),
                               blurRadius: 16,
-                              offset: Offset(0, 8),
+                              offset: const Offset(0, 8),
                             ),
                           ],
                         ),
@@ -94,7 +91,7 @@ class GustoDetailPage extends StatelessWidget {
                       ),
                       SizedBox(height: responsive.hp(1)),
                       Container(
-                        padding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
                         decoration: BoxDecoration(
                           color: colorScheme.primary.withOpacity(0.08),
                           borderRadius: BorderRadius.circular(12),
