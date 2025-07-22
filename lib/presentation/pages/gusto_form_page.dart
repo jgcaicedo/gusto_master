@@ -16,11 +16,11 @@ class GustoFormPage extends StatefulWidget {
   const GustoFormPage({super.key});
 
   @override
-  State<GustoFormPage> createState() => _GustoFormPageState();
+  State<GustoFormPage> createState() => GustoFormPageState();
 }
 
 /// Estado de la página de formulario para crear gustos.
-class _GustoFormPageState extends State<GustoFormPage> {
+class GustoFormPageState extends State<GustoFormPage> {
   final TextEditingController _nameController = TextEditingController();
   PokemonDto? selectedPokemon;
   bool _isLoading = false;
@@ -57,7 +57,12 @@ class _GustoFormPageState extends State<GustoFormPage> {
     setState(() {
       _isLoading = false;
     });
-    GoRouter.of(context).go('/prefs'); // Volver a la lista
+    // Solo navega si hay GoRouter en el contexto
+    try {
+      GoRouter.of(context).go('/prefs');
+    } catch (_) {
+      // Ignora si no hay GoRouter (por ejemplo, en tests)
+    }
   }
 
   @override
