@@ -28,10 +28,16 @@ class GustoListPage extends StatelessWidget {
             if (state is PreferenceLoading) {
               return const LoadingWidget();
             } else if (state is PreferenceError) {
-              return CustomErrorWidget(message: state.message);
+              return CustomErrorWidget(
+                message: state.message,
+                onRetry: () => context.read<PreferenceCubit>().loadGustos(),
+              );
             } else if (state is PreferenceLoaded) {
               if (state.gustos.isEmpty) {
-                return const CustomErrorWidget(message: 'No hay gustos guardados.');
+                return CustomErrorWidget(
+                  message: 'No hay gustos guardados.',
+                  onRetry: () => context.read<PreferenceCubit>().loadGustos(),
+                );
               }
               return LayoutBuilder(
                 builder: (context, constraints) {
