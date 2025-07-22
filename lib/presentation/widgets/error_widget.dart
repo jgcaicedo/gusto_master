@@ -10,25 +10,25 @@ class CustomErrorWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final responsive = Responsive(context);
+    final theme = Theme.of(context);
+    final colorScheme = theme.colorScheme;
+    final textTheme = theme.textTheme;
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Icon(Icons.error, color: Colors.red, size: responsive.isMobile ? 48 : 64),
+          Icon(Icons.error, color: colorScheme.error, size: responsive.isMobile ? 48 : 64),
           SizedBox(height: responsive.hp(2)),
           Text(
             message,
-            style: TextStyle(
-              color: Colors.red,
-              fontSize: responsive.isMobile ? 18 : 24,
-            ),
+            style: textTheme.titleMedium?.copyWith(color: colorScheme.error),
             textAlign: TextAlign.center,
           ),
           if (onRetry != null) ...[
             SizedBox(height: responsive.hp(2)),
             ElevatedButton(
               onPressed: onRetry,
-              child: const Text('Reintentar'),
+              child: Text('Reintentar', style: textTheme.labelLarge),
             ),
           ],
         ],

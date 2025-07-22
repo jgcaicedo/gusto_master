@@ -8,11 +8,15 @@ class LoadingWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final responsive = Responsive(context);
+    final theme = Theme.of(context);
+    final colorScheme = theme.colorScheme;
     return Center(
       child: SizedBox(
         width: responsive.isMobile ? 48 : 64,
         height: responsive.isMobile ? 48 : 64,
-        child: const CircularProgressIndicator(),
+        child: CircularProgressIndicator(
+          color: colorScheme.primary,
+        ),
       ),
     );
   }

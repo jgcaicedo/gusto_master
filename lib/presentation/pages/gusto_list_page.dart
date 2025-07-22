@@ -16,6 +16,8 @@ class GustoListPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final responsive = Responsive(context);
+    final theme = Theme.of(context);
+    final textTheme = theme.textTheme;
     return Scaffold(
       appBar: AppBar(title: const Text('Mis Gustos')),
       body: Padding(

@@ -68,8 +68,16 @@ class GustoFormPageState extends State<GustoFormPage> {
   @override
   Widget build(BuildContext context) {
     final responsive = Responsive(context);
+    final theme = Theme.of(context);
+    final textTheme = theme.textTheme;
     return Scaffold(
-      appBar: AppBar(title: const Text('Nuevo Gusto')),
+      appBar: AppBar(
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () => GoRouter.of(context).go('/prefs'),
+        ),
+        title: Text('Nuevo Gusto', style: textTheme.titleLarge),
+      ),
       body: _isLoading
           ? const LoadingWidget()
           : Padding(
