@@ -1,16 +1,52 @@
-# gusto_master
+# Gusto Master
 
-A new Flutter project.
+Gusto Master es una aplicación Flutter que permite a los usuarios crear, listar, ver detalles y eliminar gustos personalizados, asociando cada gusto a un Pokémon obtenido desde la PokéAPI. Utiliza Hive para almacenamiento local y Bloc/Cubit para la gestión de estados.
 
-## Getting Started
+## Características principales
+- Listado de gustos guardados
+- Creación de gustos personalizados
+- Selección de Pokémon desde la PokéAPI
+- Visualización de detalles de cada gusto
+- Eliminación de gustos
+- Manejo de estados de carga y error
+- Diseño responsivo para móvil y tablet
 
-This project is a starting point for a Flutter application.
+## Estructura del proyecto
+- **lib/core/**: Utilidades y constantes (temas, responsividad)
+- **lib/data/**: Modelos, repositorios y fuentes de datos
+- **lib/logic/**: Cubits y estados para la gestión de gustos y API
+- **lib/presentation/**: Páginas y widgets de la interfaz de usuario
+- **test/**: Pruebas unitarias y de widgets
 
-A few resources to get you started if this is your first Flutter project:
+## Instalación y ejecución
+1. Clona el repositorio:
+   ```sh
+   git clone https://github.com/jgcaicedo/gusto_master.git
+   ```
+2. Instala dependencias:
+   ```sh
+   flutter pub get
+   ```
+3. Ejecuta la app:
+   ```sh
+   flutter run
+   ```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Pruebas
+Para ejecutar las pruebas:
+```sh
+flutter test
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Tecnologías utilizadas
+- Flutter
+- Hive
+- Bloc/Cubit
+- GoRouter
+- PokéAPI
+
+## Autores
+- Juan Caicedo
+
+## Licencia
+Este proyecto está bajo la licencia MIT.
